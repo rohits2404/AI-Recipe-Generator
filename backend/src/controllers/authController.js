@@ -1,5 +1,5 @@
 import User from '../models/User.js';
-import UserPreferences from '../models/UserPrefrences.js';
+import UserPrefrences from '../models/UserPrefrences.js';
 import jwt from 'jsonwebtoken';
 
 const generateToken = (user) => {
@@ -33,7 +33,7 @@ export const register = async (req, res, next) => {
         }
         // Create User
         const user = await User.create({email: emailNormalized, password, name});
-        await UserPreferences.upsert(user.id , {
+        await UserPrefrences.upsert(user.id , {
             dietary_restrictions: [],
             allergies: [],
             preferred_cuisines: [],
