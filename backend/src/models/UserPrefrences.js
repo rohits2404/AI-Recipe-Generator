@@ -1,6 +1,6 @@
 import { sql } from '../config/db.js';
 
-class UserPreferences {
+class UserPrefrences {
 
     // Create or Update User Preferences
     static async upsert(userId, preferences) {
@@ -51,4 +51,4 @@ class UserPreferences {
     }
 }
 
-export default UserPreferences;
+export default UserPrefrences;
